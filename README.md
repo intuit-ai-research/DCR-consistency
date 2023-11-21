@@ -52,3 +52,17 @@ The `data` depends on the prompt used. By default each item should be a dict con
 
 (TODO: update link once correct repo is created)
 See [CONTRIBUTING.md](https://github.com/intuit/to_be_created/blob/main/CONTRIBUTING.md).
+
+
+
+### Citation 
+
+```
+@inproceedings{zhang2023sac3,
+      title={A Divide-Conquer-Reasoning Approach to Consistency Evaluation and Improvement in Blackbox Large Language Models},
+      author={Wendi Cui, Jiaxin Zhang, Zhuohang Li, Damien Lopez, Kamalika Das, Bradley Malin, Sricharan Kumar},
+      booktitle={NeurIPS 2023 Workshop on Socially Responsible Language Modelling Research},
+      year={2023},
+      primaryClass={cs.CL}
+}
+```
