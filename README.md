@@ -1,7 +1,7 @@
 # DCR-Consistency
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-red.svg)](#python)
 [![License](https://img.shields.io/github/license/intuit/email-decomposer)](https://raw.githubusercontent.com/intuit/email-decomposer/master/LICENSE)
-[![codecov](https://codecov.tools.a.intuit.com/ghe/wcui/divide-conquer-metric/branch/main/graph/badge.svg)](https://codecov.tools.a.intuit.com/ghe/wcui/divide-conquer-metric)
+[![codecov](https://codecov.io/gh/intuit-ai-research/DCR-consistency/graph/badge.svg?token=IHBA2755W3)](https://codecov.io/gh/intuit-ai-research/DCR-consistency)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 Inconsitency evalution and mitigation method described in the paper EVALUATING AND IMPROVING GENERATION CONSISTENCY OF LARGE LANGUAGE MODELS VIA A DIVIDE-CONQUER-REASONING APPROACH. It uses LLM as the method to detect and mitigate inconsistencies between a reference and a candidate. (TODO: add paper url)
