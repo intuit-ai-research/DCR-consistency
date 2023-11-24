@@ -50,8 +50,7 @@ The `data` depends on the prompt used. By default each item should be a dict con
 
 ### Contributing
 
-(TODO: update link once correct repo is created)
-See [CONTRIBUTING.md](https://github.com/intuit/to_be_created/blob/main/CONTRIBUTING.md).
+See [CONTRIBUTING.md](https://github.com/intuit-ai-research/DCR-consistency/blob/main/CONTRIBUTING.md).
 
 
 
