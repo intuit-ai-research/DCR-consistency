@@ -20,7 +20,7 @@ setuptools.setup(
     author='Wendi Cui, Jiaxin Zhang',
     author_email='wendi_cui@intuit.com',
     license='Apache License 2.0',
-    packages=['dcr'],
+    packages=setuptools.find_packages(),
     install_requires=reqs,
     python_requires=">=3.9",
     classifiers=[

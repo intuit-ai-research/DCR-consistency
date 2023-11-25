@@ -27,7 +27,7 @@ class OpenAIConnector(LLM):
         return chat_completion.choices[0].message.content
 
 
-api_key = "your_api_key"
+api_key = "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"
 LLM_CONNECTOR = OpenAIConnector(api_key)
 MODEL_CONFIG = {
     "model": "gpt-4",
