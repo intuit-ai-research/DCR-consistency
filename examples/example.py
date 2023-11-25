@@ -1,6 +1,7 @@
 import json
 
 import pandas as pd
+from openai import OpenAI
 
 from dcr.components.llm import LLM
 from dcr.evaluator import evaluate
@@ -14,11 +15,20 @@ class OpenAIConnector(LLM):
         LLM (_type_): handles api calls to Openai models
     """
 
+    def __init__(self, openai_key):
+        super().__init__()
+        self.client = OpenAI(api_key=openai_key)
+
     def get_chat_response(self, prompt, tims=0, **model_config) -> str:
-        return ""
+        chat_completion = self.client.chat.completions.create(
+            messages=prompt,
+            **model_config,
+        )
+        return chat_completion.choices[0].message.content
 
 
-LLM_CONNECTOR = OpenAIConnector()
+api_key = "your_api_key"
+LLM_CONNECTOR = OpenAIConnector(api_key)
 MODEL_CONFIG = {
     "model": "gpt-4",
     "temperature": 0,
@@ -31,13 +41,17 @@ OUTPUT_RAI = "test_gags_improved.csv"
 
 def evalute_example():
     data = get_qags_data()
+    print("data retreived")
     res = evaluate(LLM_CONNECTOR, MODEL_CONFIG, data, worker_count=5)
+    print("evaluation completed")
     res.to_csv(OUTPUT_DCE_AMC, index=False)
 
 
 def improve_example():
     data = transfer_data_from_dce_amc()
+    print("data transformed")
     res = improve(LLM_CONNECTOR, MODEL_CONFIG, data, worker_count=5)
+    print("improve completed")
     res.to_csv(OUTPUT_RAI, index=False)
 
 
@@ -45,7 +59,7 @@ def get_qags_data():
     data = []
     with open(SOURCE_FILE) as f:
         raw_data = json.load(f)
-        for item in raw_data[:50]:
+        for item in raw_data[:5]:
             doc_id = item["doc_id"]
             article = item["source"]
             summary = item["system_output"]

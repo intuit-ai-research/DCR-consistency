@@ -22,7 +22,7 @@ setuptools.setup(
     license='Apache License 2.0',
     packages=['dcr'],
     install_requires=reqs,
-    python_requires=">=3.6",
+    python_requires=">=3.9",
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',

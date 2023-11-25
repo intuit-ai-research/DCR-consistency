@@ -7,11 +7,22 @@
 Inconsitency evalution and mitigation method described in the paper EVALUATING AND IMPROVING GENERATION CONSISTENCY OF LARGE LANGUAGE MODELS VIA A DIVIDE-CONQUER-REASONING APPROACH. It uses LLM as the method to detect and mitigate inconsistencies between a reference and a candidate. (TODO: add paper url)
 
 ## How to use
-### Install 
-(TODO: publish to pip)
+### Run Example
+To run the example in `examples` folder, make sure you have python>=3.9.
+Add the root directory of this repo into your python path with
 ```
-pip install dcr-consistency
+export PYTHONPATH='location_to_this_repo'
 ```
+Then install the necessary packages with:
+```
+pip install -r examples/requirements_example.txt
+```
+Then update the `api_key` variable with your apikey.
+Then run 
+```
+python examples/example.py
+```
+
 ### Import
 ```
 from dcr.evaluator import evaluate
