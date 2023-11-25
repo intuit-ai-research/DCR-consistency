@@ -5,9 +5,9 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ### 🤔 What is DCR-Consistency
-DCR-Consistency is a novel framework that uses LLM agents to detect and mitigate inconsistencies, or in other words hallucinations. It takes advantage of LLM's power in semantic understanding while circumventing known pitfalls such as relatively poor performance in math.\
+DCR-Consistency is a novel framework that uses LLM agents to detect and mitigate inconsistencies, or in other words hallucinations. It takes advantage of LLM's power in semantic understanding while circumventing known pitfalls such as relatively poor performance in math.
 
-Given a `reference` as the ground truth and a `candidate` to evaluate, it will output a numeric score between [-1, 1] indicating its consistency and a list of `reasons` about why this score is generated. Based on such `reasons`, it can also improve the `candidate` and mitigate detected inconsistencies. More details can be found in [our paper](_add_paper_url_)
+Given a `reference` as the ground truth and a `candidate` to evaluate, it will output a numeric score between [-1, 1] indicating its consistency and a list of `reasons` about why this score is generated. Based on such `reasons`, it can also improve the `candidate` and mitigate detected inconsistencies. More details can be found in [our paper](_add_paper_url_).
 
 
 ### 🤖 Installation
@@ -45,10 +45,10 @@ python examples/example.py
 res = evaluate(_your_LLM_, _your_model_config_, data, worker_count=5)
 ```
 
-* *_your_LLM_*: This will be your own object that follows the contract of [LLM](https://github.com/intuit-ai-research/DCR-consistency/blob/main/dcr/components/llm.py) abstract class. This allows freedom of using whatever LLM you desire. An example can be found [here](https://github.com/intuit-ai-research/DCR-consistency/blob/716a802d58e92b4f0ce5f9e5303bb713737d3676/examples/example.py#L11)
-* *_your_model_config_*: This will be whatever parameter your LLM needs. An example can be found [here](https://github.com/intuit-ai-research/DCR-consistency/blob/716a802d58e92b4f0ce5f9e5303bb713737d3676/examples/example.py#L32)
-* *worker_count*: This configures the number of threads to run the program
-* *data*: The `data` filed will be a list of data to run. By default each item in it should be a dict containing fields `id`, `reference` and `candidate`. The returned item will be the original data passed in joined with the columns below:
+* **_your_LLM_**: This will be your own object that handles communication with LLM. It should follow the contract of [LLM](https://github.com/intuit-ai-research/DCR-consistency/blob/main/dcr/components/llm.py) abstract class. This allows freedom of using whatever LLM you desire. An example can be found [here](https://github.com/intuit-ai-research/DCR-consistency/blob/716a802d58e92b4f0ce5f9e5303bb713737d3676/examples/example.py#L11)
+* **_your_model_config_**: This will be whatever parameter your LLM needs. An example can be found [here](https://github.com/intuit-ai-research/DCR-consistency/blob/716a802d58e92b4f0ce5f9e5303bb713737d3676/examples/example.py#L32)
+* **worker_count**: This configures the number of threads to run the program
+* **data**: The `data` filed will be a list of data to run. By default each item in it should be a dict containing fields `id`, `reference` and `candidate`. The returned item will be the original data passed in joined with the columns below:
 
 | column  | meaning   |
 |-------------|:------------|
@@ -65,10 +65,10 @@ res = evaluate(_your_LLM_, _your_model_config_, data, worker_count=5)
 res = improve(_your_LLM_, _your_model_config_, data, worker_count=5)
 ```
 
-* *_your_LLM_*: This will be your own object that follows the contract of [LLM](https://github.com/intuit-ai-research/DCR-consistency/blob/main/dcr/components/llm.py) abstract class. This allows freedom of using whatever LLM you desire. An example can be found [here](https://github.com/intuit-ai-research/DCR-consistency/blob/716a802d58e92b4f0ce5f9e5303bb713737d3676/examples/example.py#L11)
-* *_your_model_config_*: This will be whatever parameter your LLM needs. An example can be found [here](https://github.com/intuit-ai-research/DCR-consistency/blob/716a802d58e92b4f0ce5f9e5303bb713737d3676/examples/example.py#L32)
-* *worker_count*: This configures the number of threads to run the program
-* *data*: The `data` filed will be a list of data to run. By default each item in it should be a dict containing fields `id`, `article` and `sentences`. `article` is the reference. `sentences` is a list illustrating whether each sentence is or is not consistent compared to the reference and the reasons. The returned item will be the original data passed in joined with the columns below:
+* **_your_LLM_**: This will be your own object that handles communication with LLM. It should follow the contract of [LLM](https://github.com/intuit-ai-research/DCR-consistency/blob/main/dcr/components/llm.py) abstract class. This allows freedom of using whatever LLM you desire. An example can be found [here](https://github.com/intuit-ai-research/DCR-consistency/blob/716a802d58e92b4f0ce5f9e5303bb713737d3676/examples/example.py#L11)
+* **_your_model_config_**: This will be whatever parameter your LLM needs. An example can be found [here](https://github.com/intuit-ai-research/DCR-consistency/blob/716a802d58e92b4f0ce5f9e5303bb713737d3676/examples/example.py#L32)
+* **worker_count**: This configures the number of threads to run the program
+* **data**: The `data` filed will be a list of data to run. By default each item in it should be a dict containing fields `id`, `article` and `sentences`. `article` is the reference. `sentences` is a list illustrating whether each sentence is or is not consistent compared to the reference and the reasons. The returned item will be the original data passed in joined with the columns below:
 
 | column  | meaning   |
 |-------------|:------------|
