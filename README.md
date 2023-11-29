@@ -7,7 +7,7 @@
 ### 🤔 What is DCR-Consistency
 DCR-Consistency is a novel framework that uses LLM agents to detect and mitigate inconsistencies, or in other words hallucinations. It takes advantage of LLM's power in semantic understanding while circumventing known pitfalls such as relatively poor performance in math.
 
-Given a `reference` as the ground truth and a `candidate` to evaluate, it will output a numeric score between [-1, 1] indicating its consistency and a list of `reasons` about why this score is generated. Based on such `reasons`, it can also improve the `candidate` and mitigate detected inconsistencies. More details can be found in [our paper](_add_paper_url_).
+Given a `reference` as the ground truth and a `candidate` to evaluate, it will output a numeric score between [-1, 1] indicating its consistency and a list of `reasons` about why this score is generated. Based on such `reasons`, it can also improve the `candidate` and mitigate detected inconsistencies. More details can be found in [our paper](_add_paper_url_). (link coming soon)
 
 
 ### 🤖 Installation
