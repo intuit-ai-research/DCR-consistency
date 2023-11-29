@@ -85,7 +85,7 @@ See [CONTRIBUTING.md](https://github.com/intuit-ai-research/DCR-consistency/blob
 ### 💁Citation 
 
 ```
-@inproceedings{zhang2023sac3,
+@inproceedings{cui2023dcr,
       title={A Divide-Conquer-Reasoning Approach to Consistency Evaluation and Improvement in Blackbox Large Language Models},
       author={Wendi Cui, Jiaxin Zhang, Zhuohang Li, Damien Lopez, Kamalika Das, Bradley Malin, Sricharan Kumar},
       booktitle={NeurIPS 2023 Workshop on Socially Responsible Language Modelling Research},
