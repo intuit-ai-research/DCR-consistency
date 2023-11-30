@@ -15,8 +15,8 @@ It composes of three parts:
 
 * DCE takes a `reference` and a `candidate`, evaluates the consistency between the two on a sentence level, and outputs a list of `reasons` on the consistency check for each sentence in the `candidate`.
 * AMC takes the output of DCE and convert it to a numeric score between [0, 1]
-* RAI takes the `reasons` output of DCE and generates improved versions that mitigate detected inconsistencies.
-<br />
+* RAI takes the `reasons` output of DCE and generates improved versions that mitigate detected inconsistencies.\
+
 ![](assets/example.png)
 
 
