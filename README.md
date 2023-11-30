@@ -78,7 +78,7 @@ res = improve(_your_LLM_, _your_model_config_, data, worker_count=5)
 * **_your_LLM_**: This will be your own object that handles communication with LLM. It should follow the contract of [LLM](https://github.com/intuit-ai-research/DCR-consistency/blob/main/dcr/components/llm.py) abstract class. This allows freedom of using whatever LLM you desire. An example can be found [here](https://github.com/intuit-ai-research/DCR-consistency/blob/716a802d58e92b4f0ce5f9e5303bb713737d3676/examples/example.py#L11)
 * **_your_model_config_**: This will be whatever parameter your LLM needs. An example can be found [here](https://github.com/intuit-ai-research/DCR-consistency/blob/716a802d58e92b4f0ce5f9e5303bb713737d3676/examples/example.py#L32)
 * **worker_count**: This configures the number of threads to run the program
-* **data**: The `data` filed will be a list of data to run. By default each item in it should be a dict containing fields `id`, `article` and `sentences`. `article` is the reference. `sentences` is a list illustrating whether each sentence is or is not consistent compared to the reference and the reasons. The returned item will be the original data passed in joined with the columns below:
+* **data**: The `data` filed will be a list of data to run. By default each item in it should be a dict containing fields `id`, `article` and `sentences`. `article` is the reference. `sentences` is a list holding information on what the original sentences are and whether each sentence is or is not consistent compared to the reference and the reasons. The returned item will be the original data passed in joined with the columns below:
 
 | column  | meaning   |
 |-------------|:------------|
