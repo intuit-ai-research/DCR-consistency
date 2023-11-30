@@ -35,7 +35,7 @@ pip install dcr-consistency
 ```
 
 ### 🚀 Quickstart
-The easiest way to start is to start is to play with the example in `examples/example.py`. To do so:
+The easiest way to start is to play with the example in `examples/example.py`. To do so:
 
 * Install the DCR-Consistency package with steps above
 * Install the necessary packages with command below (example use additional dependencies such as openai):
