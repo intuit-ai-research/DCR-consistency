@@ -5,7 +5,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ### 🤔 What is DCR-Consistency
-DCR-Consistency is a novel framework that uses LLM agents to detect and mitigate inconsistencies, or in other words hallucinations. It takes advantage of LLM's power in semantic understanding while circumventing known pitfalls such as relatively poor performance in math.
+DCR-Consistency is a novel framework that uses LLM agents to detect and mitigate inconsistencies, or in other words hallucinations. It takes advantage of LLM's power in semantic understanding while circumventing known pitfalls such as relatively poor performance in math. For more details please see [our paper](https://openreview.net/pdf?id=WcGXAxhC81).
 
 Given a `reference` as the ground truth and a `candidate` to evaluate, it will output a numeric score between [0, 1] indicating its consistency where 0 means no sentence in the `candidate` is consistent and 1 otherwise. It also outputs a list of `reasons` about why this score is generated. Better yet, based on such `reasons`, it can improve the `candidate` and mitigate detected inconsistencies. 
 
@@ -19,6 +19,16 @@ It composes of three parts:
 
 ![](assets/example.png)
 
+### 😋 How well does DCR-Consistency work?
+We evalauted DCR-Consistency framework on a wide range of datasets: QQP, PAWS-QQP, SummEval, QAGS-CNN, QAGS-XSUM.
+
+Below is a comparison of DCR-Consistency with some start of art metrics on SummEval dataset about consistency. We included prestigious metrics like BERTScore, and trending new ones leveraging LLMs(GPT-3.5/4) such as G-Eval as well. DCR-Consistency is outperforming those metrics with a large margin.
+
+![](assets/performance.png)
+
+We also evalauted the effectiveness of inconsistency migration. Below is a illustration showing the consistency rate changes after iterations of applying DCR-Consistency. We observe effective mitigations in all three datasets and 100% migration of detected inconsistency can be achieved within three rounds.
+
+![](assets/rai.png)
 
 ### 🤖 Installation
 
