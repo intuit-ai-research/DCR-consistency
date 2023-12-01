@@ -26,7 +26,7 @@ Below is a comparison of DCR-Consistency with some start of art metrics on SummE
 
 ![](assets/performance.png)
 
-We also evalauted the effectiveness of inconsistency migration. Below is a illustration showing the consistency rate changes after iterations of applying DCR-Consistency. We observe effective mitigations in all three datasets and 100% migration of detected inconsistency can be achieved within three rounds.
+We also evaluated DCR-Consistency's effectiveness on inconsistency migration. Below is a illustration showing the consistency rate changes after iterations of applying DCR-Consistency. We observe effective mitigations in all three datasets and that 100% migration of detected inconsistency can be achieved within three rounds.
 
 ![](assets/rai.png)
 
