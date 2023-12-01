@@ -24,11 +24,11 @@ We evaluated DCR-Consistency framework on a wide range of datasets: QQP, PAWS-QQ
 
 Below is a comparison of DCR-Consistency with some start of art metrics on SummEval dataset about consistency. We included prestigious metrics like BERTScore, and trending new ones leveraging LLMs(GPT-3.5/4) such as G-Eval as well. DCR-Consistency is outperforming those metrics with a large margin.
 
-<img src="assets/performance.png"  width="250"/>
+<img src="assets/performance.png"  width="300"/>
 
 We also evaluated DCR-Consistency's effectiveness on inconsistency migration. Below is a illustration showing the consistency rate changes after iterations of applying DCR-Consistency. We observe effective mitigations in all three datasets and that 100% migration of detected inconsistency can be achieved within three rounds.
 
-<img src="assets/rai.png"  width="250"/>
+<img src="assets/rai.png"  width="300"/>
 
 ### 🤖 Installation
 
