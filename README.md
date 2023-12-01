@@ -20,7 +20,7 @@ It composes of three parts:
 ![](assets/example.png)
 
 ### 😋 How well does DCR-Consistency work?
-We evalauted DCR-Consistency framework on a wide range of datasets: QQP, PAWS-QQP, SummEval, QAGS-CNN, QAGS-XSUM.
+We evaluated DCR-Consistency framework on a wide range of datasets: QQP, PAWS-QQP, SummEval, QAGS-CNN, QAGS-XSUM.
 
 Below is a comparison of DCR-Consistency with some start of art metrics on SummEval dataset about consistency. We included prestigious metrics like BERTScore, and trending new ones leveraging LLMs(GPT-3.5/4) such as G-Eval as well. DCR-Consistency is outperforming those metrics with a large margin.
 
