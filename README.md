@@ -5,7 +5,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ### 🤔 What is DCR-Consistency
-DCR-Consistency is a novel framework that uses LLM agents to detect and mitigate inconsistencies, or in other words hallucinations. It takes advantage of LLM's power in semantic understanding while circumventing known pitfalls such as relatively poor performance in math. For more details please see [our paper](https://openreview.net/pdf?id=WcGXAxhC81).
+DCR-Consistency is a novel framework that uses LLM agents to detect and mitigate inconsistencies, or in other words hallucinations. It takes advantage of LLM's power in semantic understanding while circumventing known pitfalls such as relatively poor performance in math. For more details please see [our paper](https://arxiv.org/pdf/2401.02132.pdf).
 
 Given a `reference` as the ground truth and a `candidate` to evaluate, it will output a numeric score between [0, 1] indicating its consistency where 0 means no sentence in the `candidate` is consistent and 1 otherwise. It also outputs a list of `reasons` about why this score is generated. Better yet, based on such `reasons`, it can improve the `candidate` and mitigate detected inconsistencies. 
 
@@ -106,9 +106,9 @@ See [CONTRIBUTING.md](https://github.com/intuit-ai-research/DCR-consistency/blob
 
 ```
 @inproceedings{cui2023dcr,
-      title={A Divide-Conquer-Reasoning Approach to Consistency Evaluation and Improvement in Blackbox Large Language Models},
+      title={DCR-Consistency: Evaluating and Improving Generation Consistency of Large Language Models via a Divide-Conquer-Reasoning Approach},
       author={Wendi Cui, Jiaxin Zhang, Zhuohang Li, Damien Lopez, Kamalika Das, Bradley Malin, Sricharan Kumar},
-      booktitle={NeurIPS 2023 Workshop on Socially Responsible Language Modelling Research},
+      booktitle={arXiv preprint arXiv:2401.02132},
       year={2023},
       primaryClass={cs.CL}
 }
