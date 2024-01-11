@@ -1,4 +1,4 @@
-# DCR-Consistency: Evaluating and Improving Generation Consistency of Large Language Models via a Divide-Conquer-Reasoning Approach
+# DCR-Consistency: Divide-Conquer-Reasoning for Consistency Evaluation and Improvement of Large Language Models
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-red.svg)](#python)
 [![License](https://img.shields.io/github/license/intuit/email-decomposer)](https://raw.githubusercontent.com/intuit/email-decomposer/master/LICENSE)
 [![codecov](https://codecov.io/gh/intuit-ai-research/DCR-consistency/graph/badge.svg?token=IHBA2755W3)](https://codecov.io/gh/intuit-ai-research/DCR-consistency)
@@ -11,29 +11,29 @@ Given a `reference` as the ground truth and a `candidate` to evaluate, it will o
 
 ![](assets/DCR.png)
 
-It composes of three parts:
+It is composed of three parts:
 
 * DCE takes a `reference` and a `candidate`, evaluates the consistency between the two on a sentence level, and outputs a list of `reasons` on the consistency check for each sentence in the `candidate`.
-* AMC takes the output of DCE and convert it to a numeric score between [0, 1]
+* AMC takes the output of DCE and converts it to a numeric score between [0, 1]
 * RAI takes the `reasons` output of DCE and generates improved versions that mitigate detected inconsistencies.
 
 ![](assets/example.png)
 
 ### 😋 How well does DCR-Consistency work?
-We evaluated DCR-Consistency framework on a wide range of datasets: QQP, PAWS-QQP, SummEval, QAGS-CNN, QAGS-XSUM.
+We evaluated the DCR-Consistency framework on a wide range of datasets: QQP, PAWS-QQP, SummEval, QAGS-CNN, and QAGS-XSUM.
 
-Below is a comparison of DCR-Consistency with some start of art metrics on SummEval dataset about consistency. We included prestigious metrics like BERTScore, and trending new ones leveraging LLMs(GPT-3.5/4) such as G-Eval as well. DCR-Consistency is outperforming those metrics with a large margin.
+Below is a comparison of DCR-Consistency with some start of art metrics on the SummEval dataset about consistency. We included prestigious metrics like BERTScore, and trending new ones leveraging LLMs(GPT-3.5/4) such as G-Eval as well. DCR-Consistency is outperforming those metrics by a large margin.
 
 <img src="assets/performance.png"  width="300"/>
 
-We also evaluated DCR-Consistency's effectiveness on inconsistency migration. Below is a illustration showing the consistency rate changes after iterations of applying DCR-Consistency. We observe effective mitigations in all three datasets and that 100% migration of detected inconsistency can be achieved within three rounds.
+We also evaluated DCR-Consistency's effectiveness on inconsistency migration. Below is an illustration showing the consistency rate changes after iterations of applying DCR-Consistency. We observe effective mitigations in all three datasets and that 100% migration of detected inconsistency can be achieved within three rounds.
 
 <img src="assets/rai.png"  width="300"/>
 
 ### 🤖 Installation
 
 * Ensure you have python >= 3.9
-* Clone this repo and install with
+* Clone this repo and install it with
 
 ```
 pip install . 
@@ -106,7 +106,7 @@ See [CONTRIBUTING.md](https://github.com/intuit-ai-research/DCR-consistency/blob
 
 ```
 @inproceedings{cui2023dcr,
-      title={DCR-Consistency: Evaluating and Improving Generation Consistency of Large Language Models via a Divide-Conquer-Reasoning Approach},
+      title={DCR-Consistency: Divide-Conquer-Reasoning for Consistency Evaluation and Improvement of Large Language Models},
       author={Wendi Cui, Jiaxin Zhang, Zhuohang Li, Damien Lopez, Kamalika Das, Bradley Malin, Sricharan Kumar},
       booktitle={arXiv preprint arXiv:2401.02132},
       year={2023},
